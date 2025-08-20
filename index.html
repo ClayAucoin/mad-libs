@@ -11,51 +11,84 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="style.css">
+
     <title>Mad Libs!</title>
 </head>
 
 <body>
-    <div class="container-sm mt-3 p-5 bg-primary text-white">
+    <div id="mainDiv" class="container-sm mt-3 p-5 bg-primary text-white">
         <div class="text-center pb-5">
             <h1>Mad Libs!</h1>
             <h3>Learning to drive</h3>
         </div>
-        <form>
-            <div class="row mb-3">
-                <label for="inputPluralNoun" class="col-sm-2 col-form-label">Plural Noun</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPluralNoun">
+
+        <!--form div -->
+        <div id="formContainer">
+            <form id="myForm">
+
+                <!-- fields with NO default values -->
+                <div class="row mb-3">
+                    <label for="inputPluralNoun" class="col-sm-3 col-form-label">Plural Noun</label>
+                    <div class="col-sm-9"><input id="inputPluralNoun" type="text" class="form-control"></div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label for="inputNoun1" class="col-sm-2 col-form-label">Noun</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputNoun1">
+                <div class="row mb-3">
+                    <label for="inputNoun1" class="col-sm-3 col-form-label">Noun</label>
+                    <div class="col-sm-9"><input id="inputNoun1" type="text" class="form-control"></div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label for="inputNoun2" class="col-sm-2 col-form-label">Noun</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputNoun2">
+                <div class="row mb-3">
+                    <label for="inputNoun2" class="col-sm-3 col-form-label">Noun</label>
+                    <div class="col-sm-9"><input id="inputNoun2" type="text" class="form-control"></div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label for="inputSong" class="col-sm-2 col-form-label">Song</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputSong">
+                <div class="row mb-3">
+                    <label for="inputSong" class="col-sm-3 col-form-label">Song</label>
+                    <div class="col-sm-9"><input id="inputSong" type="text" class="form-control">
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label for="inputVerb" class="col-sm-2 col-form-label">Verb</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputVerb">
+                <div class="row mb-3">
+                    <label for="inputVerb" class="col-sm-3 col-form-label">Verb</label>
+                    <div class="col-sm-9"><input id="inputVerb" type="text" class="form-control"></div>
                 </div>
+                <div class="text-end"><button id="submitButton" type="submit" class="btn btn-danger">Submit</button>
+                </div>
+
+                <!-- fields with default values -->
+                <!--<div class="row mb-3">
+                    <label for="inputPluralNoun" class="col-sm-3 col-form-label">Plural Noun</label>
+                    <div class="col-sm-9"><input id="inputPluralNoun" type="text" class="form-control" value="Happy's">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputNoun1" class="col-sm-3 col-form-label">Noun</label>
+                    <div class="col-sm-9"><input id="inputNoun1" type="text" class="form-control" value="cat"></div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputNoun2" class="col-sm-3 col-form-label">Noun</label>
+                    <div class="col-sm-9"><input id="inputNoun2" type="text" class="form-control" value="dog"></div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputSong" class="col-sm-3 col-form-label">Song</label>
+                    <div class="col-sm-9"><input id="inputSong" type="text" class="form-control"
+                            value="The Song Remains The Same">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputVerb" class="col-sm-3 col-form-label">Verb</label>
+                    <div class="col-sm-9"><input id="inputVerb" type="text" class="form-control" value="run"></div>
+                </div>
+                <div class="text-end"><button id="submitButton" type="submit" class="btn btn-danger myButton">Submit</button>
+                </div>-->
+            </form>
+        </div>
+
+        <!-- result div -->
+        <div id="resultContainer" class="d-none fs-3">
+            <div id="resultDiv"></div>
+            <div class="text-center mt-4"><button id="resetButton" type="reset" class="btn btn-danger myButton">Start
+                    Again</button>
             </div>
-            <div class="text-end">
-                <button type="submit" class="btn btn-danger">Submit</button>
-            </div>
-        </form>
-    </div>
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
