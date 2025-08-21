@@ -3,11 +3,6 @@ onEvent("myForm", "submit", function (event) {
     buildLib();
 });
 
-onEvent("start_againButton", "click", function (event) {
-    event.preventDefault();
-    buildLib();
-});
-
 onEvent("resetButton", "click", resetLib);
 
 function buildLib() {
